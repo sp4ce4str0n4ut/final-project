@@ -1,0 +1,60 @@
+.pokemon-profile {
+    margin: 5px;
+    padding: 20px;
+    height: auto;
+    width: auto;
+    background-color: #dcd3ea;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pokemon-profile-wrap {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pokemon-profile-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pokemon-profile-button {
+    height: auto;
+    max-width: 200px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-image: linear-gradient( to right, #77a1d3 0%, #79cbca 51%, #77a1d3 100%);
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pokemon-profile-img {
+    height: auto;
+    width: 90%;
+    cursor: pointer;
+}
+
+.pokemon-profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-profile-name {
+    text-transform: capitalize;
+}
