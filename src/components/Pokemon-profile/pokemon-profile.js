@@ -1,12 +1,10 @@
 import React from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './pokemon-profile.css';
 
-const PokemonProfile = () => {
+const PokemonProfile = ({pokemon : {id, name}}) => {
     const history = useHistory();
-    const location = useLocation();
-    const {name, id} = location.state;
-    
+
     return (
         <div className='pokemon-profile-wrap'>
             <div className='pokemon-profile'>

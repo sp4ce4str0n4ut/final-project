@@ -2,19 +2,20 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AppHeader from '../App-header/app-header';
 import AppSidebar from '../App-sidebar/app-sidebar';
-import ListPokemons from '../../containers/PokemonList/ListPokemons';
+import ListPokemons from '../../containers/ListPokemons/ListPokemons';
 import ShowProfile from '../../containers/ShowProfile/ShowProfile';
 import './app.css';
 
 const App = () => {
+
   return (
     <Router>
       <div className='App'>
-        <AppSidebar />
         <AppHeader />
+        <AppSidebar />
         <Switch>
-          <Route exact path='/' component={ListPokemons} />
-          <Route exact path='/pokemon-list?id=:id&name=:name' component={ShowProfile}/>
+          <Route path={'/'} exact render={() => <ListPokemons />} />
+          <Route path={`/pokemon/:id`} component={ShowProfile} />
         </Switch>
       </div>
     </Router>
