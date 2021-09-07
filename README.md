@@ -1,19 +1,34 @@
-## Requirements
+# POKEDEX App
+### Requirements
 
--   [x] `axios`
--   [x] `webpack`
--   [x] `react`
--   [x] `react-dom`
--   [x] `react-router-dom`
--   [ ] `redux`
--   [ ] `redux-thunk`
+* `axios`
+* `concurrently`
+* `node-sass`
+* `webpack`
+* `react`
+* `react-dom`
+* `react-router-dom`
+* `react-redux`
+* `redux-thunk`
 
-## Available Scripts
+### Features
+
+- **Pagination** via `Load more` button 
+- **Adaptive design**
+- **Navigation Menu**
+- **State management** using `Redux`+`Thunk`
+
+### Structure
+- **Home page** contains list of cards with all available pokemons (more pokemons could be load through pressing `Load more` button);
+- Pressing `Catch` button allows you to **catch a pokemons**;
+- Pressing on pokmon card shows you **a pokemon page**, which contains detailed information abourt pokemon. Additionly, if pokemon is caught, date and time of capture going to be shown;
+- List of **caught pokemons** and redirect to homepage is available by buttons on the sidebar.
+
+### Available Scripts
 
 In order to run project, enter following commands while in the project main directory:
 
-### `json-server --watch db.json --port 3001`
-### `npm start`
+## `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -21,7 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm run build`
+## `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
