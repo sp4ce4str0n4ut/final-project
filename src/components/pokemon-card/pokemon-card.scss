@@ -1,0 +1,32 @@
+@import '../../scss/mixins';
+@import '../../scss/variables';
+
+.pokemon-card {
+	margin: 5px;
+	height: auto;
+	width: 300px;
+	background-color: $card-color;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+    &-id {
+        font-size: 0.8rem;
+        color: desaturate($font-black, 20%);
+    }
+    &-img {
+        height: auto;
+        width: 90%;
+        cursor: pointer;
+    }
+    &-name {
+        text-transform: capitalize;
+    }
+    &-button {
+        @include button($button-primary, $button-secondary, $button-secondary);
+        &-catched {
+            @include button($button-catched-primary, $button-catched-secondary, $button-catched-primary);
+        }
+    }
+}

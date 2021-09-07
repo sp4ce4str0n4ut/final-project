@@ -1,7 +1,0 @@
-.Pokemon-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-content: flex-start;
-}

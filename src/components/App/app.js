@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AppHeader from '../App-header/app-header';
-import AppSidebar from '../App-sidebar/app-sidebar';
+import AppHeader from '../app-header/app-header';
+import AppSidebar from '../app-sidebar/app-sidebar';
 import ListPokemons from '../../containers/ListPokemons/ListPokemons';
-import ShowProfile from '../../containers/ShowProfile/ShowProfile';
-import './app.css';
 import ListCatchedPokemons from '../../containers/ListCatchedPokemons/ListCatchedPokemons';
+import ShowProfile from '../../containers/ShowProfile/ShowProfile';
+import './app.scss';
 
 const App = () => {
 
   return (
     <Router>
-      <div className='App'>
+      <div className='app'>
         <AppHeader />
         <AppSidebar />
         <Switch>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Pokemon from '../../components/Pokemon/pokemon';
+import Pokemon from '../../components/pokemon-card/pokemon-card';
 
 const ListCatchedPokemons = () => {
     let pokemonsCatched = [];
@@ -9,9 +9,12 @@ const ListCatchedPokemons = () => {
     pokemonsCatched = pokemons.filter(pokemon => pokemon.isCatched);
 
     return pokemonsCatched.length === 0 ? (
-      <h1>Nothing here yet</h1>
+      <div class="empty-message">
+        <h2>Nothing here yet</h2>
+        <img src="/assets/images/pikachu.png" alt="pikachu" />
+      </div>
     ) : (
-      <div className="Pokemon-list">
+      <div className="pokemon-list">
         {pokemonsCatched &&
           pokemonsCatched.map((element) => (
             <Pokemon

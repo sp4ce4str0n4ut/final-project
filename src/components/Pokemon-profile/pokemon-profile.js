@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import './pokemon-profile.css';
+import './pokemon-profile.scss';
 
 const PokemonProfile = ({pokemon : {id, name, isCatched, timestamp}}) => {
     const history = useHistory();

@@ -1,8 +1,8 @@
 import React, {useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getPokemon } from '../../store/actions/actions';
-import PokemonProfile from '../../components/Pokemon-profile/pokemon-profile';
-import Loader from '../../components/Loader/loader';
+import PokemonProfile from '../../components/pokemon-profile/pokemon-profile';
+import Loader from '../../components/loader/loader';
 
 const ShowProfile = ({ pokemon, pokemons, isLoading, errorMsg, getPokemon, match }) => {
   const {id} = match.params;

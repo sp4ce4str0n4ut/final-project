@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+
+.app {
+    &-header {
+        background-color: darken($background-color, 15%);
+        height: 8vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(8px + 2vmin);
+        color: $font-white;
+        z-index: 1;
+    }
+    &-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img {
+            height: 5vh;
+            width: 5vh;
+            margin: 10px;
+        }
+    } 
+}

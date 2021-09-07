@@ -1,0 +1,135 @@
+@import '../../scss/variables';
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    height: 100%;
+    width: auto;
+    padding-top: 8vh;
+}
+
+.visible {
+    height: 3em;
+    width: 10em;
+}
+
+.pokeball {
+  height: 30px;
+  width: 30px;
+  margin: 5px 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid $poke-black;
+  transform-origin: center bottom;
+
+  .base {
+    background: $poke-black;
+    height: 80%;
+    width: 80%;
+    padding: 10%;
+  }
+
+  .upper-half {
+    position: absolute;
+    background: $poke-red;
+    height: 42%;
+    width: 100%;
+  }
+
+  .lower-half {
+    bottom: 0;
+    position: absolute;
+    background: $poke-white;
+    height: 42%;
+    width: 100%;
+  }
+
+  .inner-circle {
+    border-radius: 50%;
+    height: 20%;
+    width: 20%;
+    background: $poke-white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid $poke-black;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.indicator-inner {
+  border-radius: 50%;
+  height: 20%;
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $poke-white;
+}
+
+.indicator {
+  border-radius: 50%;
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $indic-red;
+  background: -webkit-radial-gradient(center, $indic-red, $indic-black);
+  background: -moz-radial-gradient(center, $indic-red, $indic-black);
+  background: radial-gradient(ellipse at center, $indic-red, $indic-black);
+
+  opacity: 0;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  5% {
+    transform: rotate(-5deg);
+  }
+  10% {
+    transform: rotate(5deg);
+  }
+  15% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.selected {
+  animation: shake 1.5s ease-in infinite;
+  .indicator {
+    opacity: 1;
+    animation: blink 1s ease-in-out infinite;
+  }
+  .indicator-inner {
+    background: $poke-red;
+  }
+}
