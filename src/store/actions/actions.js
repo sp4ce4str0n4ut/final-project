@@ -54,6 +54,6 @@ export const catchPokemon = (id, date) => dispatch => {
     dispatch({
         type: CATCH_POKEMON,
         id: id,
-        payload: date,
-    })
-}
+        date: date,
+    });
+};

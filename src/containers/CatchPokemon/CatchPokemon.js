@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { catchPokemon } from '../../store/actions/actions';
 import { CURRENT_DATE } from '../../store/constants/constants';
 
-const getDate = date => {
+const getDate = date => { 
   const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
   const month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(date);
   const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
@@ -23,7 +23,6 @@ const CatchPokemon = ({id}) => {
         const date = new Date(CURRENT_DATE + event.timeStamp);
 
         dispatch(catchPokemon(id, getDate(date)));
-        //eslint-disable-next-line
       }, [dispatch, id]);
 
     if (catchedFlag) {

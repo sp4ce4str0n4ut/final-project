@@ -37,7 +37,7 @@ const pokemonsReducer = (state = initialState, action) => {
         case CATCH_POKEMON:
             const updatedPokemons = state.pokemons.map((pokemon) => {
                 if (pokemon.id === action.id) {
-                    return {...pokemon, isCatched: true, timestamp: action.payload};
+                    return {...pokemon, isCatched: true, timestamp: action.date};
                 } else {
                     return {...pokemon};
                 }
