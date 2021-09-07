@@ -133,3 +133,11 @@
     background: $poke-red;
   }
 }
+
+@media (min-width: 1px) and (max-width: 575px) {
+  .pokeball {
+    height: 30px;
+    width: 30px;
+    margin: 5px 2px;
+  }
+}

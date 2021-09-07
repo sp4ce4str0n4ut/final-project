@@ -30,3 +30,10 @@
         }
     }
 }
+
+@media (min-width: 1px) and (max-width: 575px) {
+    .pokemon-card {
+      margin: 5px 40px;
+    }
+  }
+  

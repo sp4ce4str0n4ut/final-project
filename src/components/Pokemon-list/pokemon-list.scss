@@ -24,6 +24,17 @@
     }
 }
 
+.error-message {
+    font-size: calc(14px + 4vmin);
+    color: $font-white;
+    &-wrap {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 .load-more-button {
     @include button(#77a1d3, #79cbca, #79cbca);
 }

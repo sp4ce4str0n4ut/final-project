@@ -23,7 +23,12 @@ const ShowProfile = ({ pokemon, pokemons, isLoading, errorMsg, getPokemon, match
     const showPokemon = () => {
       if (isLoading) return <Loader />;
 
-      if (errorMsg !== "") return <h1>Error: {errorMsg}</h1>;
+      if (errorMsg !== "")
+        return (
+          <div className="error-message-wrap">
+            <h1 className="error-message">{errorMsg}</h1>
+          </div>
+        );
 
       if (pokemon)
         return (

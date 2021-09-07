@@ -9,7 +9,7 @@ const ListCatchedPokemons = () => {
     pokemonsCatched = pokemons.filter(pokemon => pokemon.isCatched);
 
     return pokemonsCatched.length === 0 ? (
-      <div class="empty-message">
+      <div className="empty-message">
         <h2>Nothing here yet</h2>
         <img src="/assets/images/pikachu.png" alt="pikachu" />
       </div>

@@ -27,7 +27,7 @@ const pokemonsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: false,
-                errorMsg: 'Something went wrong, can\'t load pokemons from server',
+                errorMsg: 'Oops! Something went wrong',
             };
         case INCREASE_PAGE_COUNT:
             return {

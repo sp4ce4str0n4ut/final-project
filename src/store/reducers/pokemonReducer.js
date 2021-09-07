@@ -26,7 +26,7 @@ const pokemonReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: false,
-                errorMsg: 'Something went wrong, can\'t load pokemon from server',
+                errorMsg: 'Oops! Something went wrong',
             }
         default:
             return state;

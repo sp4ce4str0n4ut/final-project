@@ -24,7 +24,11 @@ const ListPokemons = ({getPokemons, loadPage, pokemons, page, isLoading, errorMs
 
   const showPokemons = () => {
     if (errorMsg !== "") {
-      return <h1>Error: {errorMsg}</h1>;
+      return (
+        <div className="error-message-wrap">
+          <h1 className="error-message">{errorMsg}</h1>
+        </div>
+      );
     }
 
     if (pokemons) {
