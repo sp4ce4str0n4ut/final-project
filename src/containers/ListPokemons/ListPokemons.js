@@ -2,7 +2,7 @@ import React, { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPokemons, loadPage } from '../../store/actions/actions';
 import PokemonList from '../../components/Pokemon-list/pokemon-list';
-import { POKEMONS_PER_PAGE } from '../../store/constants/actionTypes';
+import { POKEMONS_PER_PAGE } from '../../store/constants/constants'; 
 
 const ListPokemons = () => {
   

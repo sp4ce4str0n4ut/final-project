@@ -5,6 +5,7 @@ import AppSidebar from '../App-sidebar/app-sidebar';
 import ListPokemons from '../../containers/ListPokemons/ListPokemons';
 import ShowProfile from '../../containers/ShowProfile/ShowProfile';
 import './app.css';
+import ListCatchedPokemons from '../../containers/ListCatchedPokemons/ListCatchedPokemons';
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
         <AppSidebar />
         <Switch>
           <Route path={'/'} exact render={() => <ListPokemons />} />
+          <Route path={'/catched'} exact render={() => <ListCatchedPokemons />} />
           <Route path={`/pokemon/:id`} component={ShowProfile} />
         </Switch>
       </div>

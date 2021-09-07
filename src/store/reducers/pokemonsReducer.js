@@ -1,5 +1,5 @@
 import { POKEMONS_LOADING, GET_POKEMONS_SUCCESS, 
-        GET_POKEMONS_FAILURE, INCREASE_PAGE_COUNT  } from "../constants/actionTypes";
+        GET_POKEMONS_FAILURE, INCREASE_PAGE_COUNT, CATCH_POKEMON  } from "../constants/actionTypes";
 
 const initialState = {
     pokemons: [],
@@ -33,6 +33,18 @@ const pokemonsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 page: state.page + 1,
+            }
+        case CATCH_POKEMON:
+            const updatedPokemons = state.pokemons.map((pokemon) => {
+                if (pokemon.id === action.id) {
+                    return {...pokemon, isCatched: true, timestamp: action.payload};
+                } else {
+                    return {...pokemon};
+                }
+            })
+            return {
+                ...state,
+                pokemons: updatedPokemons,
             }
         default:
             return state;

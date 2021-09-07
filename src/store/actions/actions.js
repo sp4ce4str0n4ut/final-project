@@ -1,7 +1,8 @@
 import axios from "axios";
 import { POKEMONS_LOADING, GET_POKEMONS_SUCCESS, GET_POKEMONS_FAILURE, INCREASE_PAGE_COUNT,
-        POKEMON_LOADING, GET_POKEMON_SUCCESS, GET_POKEMON_FAILURE, POKEMONS_PER_PAGE, 
+        POKEMON_LOADING, GET_POKEMON_SUCCESS, GET_POKEMON_FAILURE, CATCH_POKEMON, 
         } from "../constants/actionTypes";
+import { POKEMONS_PER_PAGE } from "../constants/constants";
 
 export const getPokemons = (page) => async dispatch => {
     dispatch({
@@ -48,3 +49,11 @@ export const loadPage = () => dispatch => {
         type: INCREASE_PAGE_COUNT,
     });
 };
+
+export const catchPokemon = (id, date) => dispatch => {
+    dispatch({
+        type: CATCH_POKEMON,
+        id: id,
+        payload: date,
+    })
+}

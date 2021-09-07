@@ -1,10 +1,9 @@
 import { POKEMON_LOADING, GET_POKEMON_SUCCESS, 
-    GET_POKEMON_FAILURE } from "../constants/actionTypes";
+    GET_POKEMON_FAILURE} from "../constants/actionTypes";
 
 const initialState = {
 pokemon: {},
 isLoading: false,
-isCatched: false,
 errorMsg: '',
 };
 
