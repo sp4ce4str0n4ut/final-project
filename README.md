@@ -15,14 +15,14 @@
 
 - **Pagination** via `Load more` button 
 - **Adaptive design**
-- **Navigation Menu**
+- **Navigation menu**
 - **State management** using `Redux`+`Thunk`
 
 ### Structure
 - **Home page** contains list of cards with all available pokemons (more pokemons could be load through pressing `Load more` button);
-- Pressing `Catch` button allows you to **catch a pokemons**;
-- Pressing on pokmon card shows you **a pokemon page**, which contains detailed information abourt pokemon. Additionly, if pokemon is caught, date and time of capture going to be shown;
-- List of **caught pokemons** and redirect to homepage is available by buttons on the sidebar.
+- Pressing `Catch` button allows you to **catch a pokemon**;
+- Pressing on pokemon card shows you **a pokemon page**, which contains detailed information abourt pokemon. Additionally, if pokemon is caught, date and time of capture about to be shown;
+- List of **caught pokemons** and redirect to homepage are available by buttons located at the sidebar.
 
 ### Available Scripts
 
