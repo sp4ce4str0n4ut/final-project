@@ -20,7 +20,7 @@
         margin: 30vh;
     }
     img {
-        width: 250px;
+        width: 25%;
     }
 }
 
@@ -37,4 +37,12 @@
 
 .load-more-button {
     @include button(#77a1d3, #79cbca, #79cbca);
+}
+
+@media (min-width: 1px) and (max-width: 575px) {
+    .empty-message {
+        img {
+            width: 250px;
+        }
+    }
 }
